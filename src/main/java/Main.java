@@ -17,12 +17,15 @@ public class Main {
         navegar.findElement(By.xpath("//*[@id=\"APjFqb\"]")).click();
         navegar.findElement(By.xpath("//*[@id=\"APjFqb\"]")).sendKeys("whatsapp web", Keys.ENTER);
 
-        //clica no link e nextline é utilizado para realizar leitura de QRCode
-        navegar.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/div/div/div/div[1]/a/h3")).click();
+        //clica no link do whatsapp web e o nextline é utilizado para após realizar leitura de QRCode
+        navegar.findElement(By.xpath("/html/body/div[7]/div/div[11]/div/div[2]/div[2]/div/div/div[1]/div/div/div/div/div/div/div/div[1]/a/h3")).click();
         String continua = sc.nextLine();
 
-        navegar.findElement(By.xpath("/html/body/div[1]/div/div/div[4]/div/div[2]/div[2]/div/div/div[11]/div/div/div/div[2]/div[1]/div[1]/span")).click();
-        navegar.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[1]/p")).click();
-        navegar.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[1]/p")).sendKeys("Boa noite meu amor <3", Keys.ENTER);
+        //Carrega conversas do whatsapp, clica no campo pesquisar e procura por "Ariane"
+        navegar.findElement(By.xpath("/html/body/div[1]/div/div/div[4]/div/div[1]/div/div/div[2]/div/div[1]/p")).click();
+        navegar.findElement(By.xpath("/html/body/div[1]/div/div/div[4]/div/div[1]/div/div/div[2]/div/div[1]/p")).sendKeys("Ariane", Keys.ENTER);
+
+        //Clica na conversa "Ariane" e escreve
+        navegar.findElement(By.xpath("/html/body/div[1]/div/div/div[5]/div/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[1]/p")).sendKeys("Bom dia meu amor <3", Keys.ENTER);
     }
 }
