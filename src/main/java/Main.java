@@ -26,7 +26,7 @@ public class Main {
         navegar.findElement(By.xpath("/html/body/div[1]/div/div/div[4]/div/div[1]/div/div/div[2]/div/div[1]/p")).click();
         navegar.findElement(By.xpath("/html/body/div[1]/div/div/div[4]/div/div[1]/div/div/div[2]/div/div[1]/p")).sendKeys("Ariane", Keys.ENTER);
 
-        //Clica na conversa "Ariane" e escreve
+        //Clica na campo de digitação e escreve "bom dia meu amor <3" e pressiona ENTER.
         navegar.findElement(By.xpath("/html/body/div[1]/div/div/div[5]/div/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[1]/p")).sendKeys("Bom dia meu amor <3", Keys.ENTER);
     }
 }
